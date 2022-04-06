@@ -19,12 +19,22 @@ class ViewController: UIViewController, UITableViewDataSource {
         UITableViewDataSource.self
         
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       // return animals.count
+   // }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
+      //  let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        // cell.textLabel?.text = animals[indexPath.row]
+        // return cell
+  //  }
+    
+   // override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     //   var svc = ViewController2
+       // guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
+
+ // }
 
 }
+     }
 
