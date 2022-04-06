@@ -20,21 +20,19 @@ class ViewController: UIViewController, UITableViewDataSource {
         
     }
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       // return animals.count
-   // }
+        return animals.count
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      //  let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        // cell.textLabel?.text = animals[indexPath.row]
-        // return cell
-  //  }
+       let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+         cell.textLabel?.text = animals[indexPath.row]
+         return cell
+    }
     
-   // override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     //   var svc = ViewController2
-       // guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let svc = segue.destination as! ViewController2
+        guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
 
- // }
-
-}
-     }
+    }
+ }
 
