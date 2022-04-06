@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UITableViewDataSource.self
+        tableView.dataSource = self
         
     }
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let svc = segue.destination as! ViewController2
         guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
-
+        
     }
  }
 
